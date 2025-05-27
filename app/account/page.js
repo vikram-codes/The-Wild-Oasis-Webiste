@@ -1,9 +1,9 @@
+export const metadata = {
+  title: 'Accounts',
+};
+
 function page() {
-    return (
-        <h1>
-            Accounts Page
-        </h1>
-    )
+  return <h1>Accounts Page</h1>;
 }
 
-export default page
+export default page;
