@@ -8,7 +8,6 @@ export async function getCabin(id) {
   const { data, error } = await supabase.from('cabins').select('*').eq('id', id).single();
 
   // For testing
-  // await new Promise((res) => setTimeout(res, 1000));
 
   if (error) {
     console.error(error);
@@ -41,6 +40,7 @@ export const getCabins = async function () {
     console.error(error);
     throw new Error('Cabins could not be loaded');
   }
+  // await new Promise((res) => setTimeout(res, 3000));
 
   return data;
 };
