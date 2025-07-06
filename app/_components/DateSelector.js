@@ -1,14 +1,14 @@
-import { isWithinInterval } from "date-fns";
-import { DayPicker } from "react-day-picker";
-import "react-day-picker/dist/style.css";
+'use client';
+
+import { isWithinInterval } from 'date-fns';
+import { DayPicker } from 'react-day-picker';
+import 'react-day-picker/dist/style.css';
 
 function isAlreadyBooked(range, datesArr) {
   return (
     range.from &&
     range.to &&
-    datesArr.some((date) =>
-      isWithinInterval(date, { start: range.from, end: range.to })
-    )
+    datesArr.some((date) => isWithinInterval(date, { start: range.from, end: range.to }))
   );
 }
 
@@ -44,9 +44,7 @@ function DateSelector() {
             {discount > 0 ? (
               <>
                 <span className="text-2xl">${regularPrice - discount}</span>
-                <span className="line-through font-semibold text-primary-700">
-                  ${regularPrice}
-                </span>
+                <span className="line-through font-semibold text-primary-700">${regularPrice}</span>
               </>
             ) : (
               <span className="text-2xl">${regularPrice}</span>
@@ -59,7 +57,7 @@ function DateSelector() {
                 <span>&times;</span> <span>{numNights}</span>
               </p>
               <p>
-                <span className="text-lg font-bold uppercase">Total</span>{" "}
+                <span className="text-lg font-bold uppercase">Total</span>{' '}
                 <span className="text-2xl font-semibold">${cabinPrice}</span>
               </p>
             </>
