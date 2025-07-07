@@ -1,5 +1,9 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Login',
+};
+
 function LoginMessage() {
   return (
     <div className="grid bg-primary-800 ">
